@@ -1,0 +1,41 @@
+.taiJi{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(black 50%,white 50%);
+    margin: 200px auto;
+    border-radius: 50%;
+    animation: changeRotate 1s infinite alternate linear;
+}
+.leftC,.rightC{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: changeSize1 1s infinite alternate linear;
+}
+.leftC{
+    background: radial-gradient(black 20%, white 25%);
+    transform-origin: 0% 50%;
+}
+.rightC{
+    background: radial-gradient(white 20%,black  25%);
+    transform-origin: 100% 50%;
+    animation-delay: -1s;
+}
+@keyframes changeSize1{
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
+@keyframes changeRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
